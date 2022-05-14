@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #E4EBF5;
 }
 
 .App-logo {
@@ -32,7 +34,84 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.outer {
+  display: flex;
+  position: relative;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  position: absolute;
+}
+
+.inner-cc {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  position: absolute;
+  margin-right: 140px;
+  margin-top: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: whitesmoke;
+  text-align: center;
+  background: linear-gradient(-45deg, rgba(20, 179, 113, 1), rgba(60, 179, 113, 1));
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+}
+
+.inner-circle {
+  position: absolute;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.55));
+  box-shadow: 12px 12px 16px 0 rgba(250, 255, 255, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+.wx {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(var(--bg-angle), var(--bg-start), var(--bg-end));
+  box-shadow: var(--h1) var(--v1) var(--color-dark),
+    var(--h2) var(--v2) var(--color-light);
+}
+
+.z1 {
+  z-index: 1001;
+}
+
+.z2 {
+  z-index: 1002;
+}
+
+.z3 {
+  z-index: 1003;
+}
+
+.z4 {
+  z-index: 1004;
+}
+
+.element-1 {
+  box-shadow:
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.element-2 {
+  box-shadow:
+    12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
