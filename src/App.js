@@ -77,14 +77,14 @@ function XAvatar(props) {
           rotate={270}
           width={3}
           size={250}
-          value={props.value} />
+          value={props.user.score} />
       </div>
       <div className='inner-circle z2'></div>
       <div className='inner z3'>
         <Avatar
           alt="x"
           size={180}
-          src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+          src={props.user.src}
         />
       </div>
       <div className='inner-cc z4'>Score</div>
@@ -113,11 +113,21 @@ function XStats(props) {
   );
 }
 
+class User {
+  constructor(score, src) {
+    this.score = score;
+    this.src = src;
+  }
+}
+
 function App() {
+  const user = new User(70, "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp");
   return (
     <div className="App">
       <XHeader />
-      <XAvatar value={70} />
+      <XAvatar
+        user={user}
+      />
       <XUserPrev name="Mehdi" phone="09131231231" />
       <XStats skills={6} income={1000000} works={1234} />
 
